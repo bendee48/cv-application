@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 function PersonalStatement() {
-  const [saved, setSaved] = useState(false);
   const [statement, setStatement] = useState('');
+  const [saved, setSaved] = useState(false);
 
   function handleStatementChange(e) {
     setStatement(e.target.value)

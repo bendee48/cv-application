@@ -36,7 +36,7 @@ function GeneralInfo() {
 
   return (
     <div>
-      <h1>Personal</h1>
+      <h1>Details</h1>
       <form onSubmit={handleFormSubmit}>
         <div>
           <label htmlFor="name">Name:</label>

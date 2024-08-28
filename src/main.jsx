@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { GeneralInfo } from './components/GeneralInfo.jsx'
 import { PersonalStatement } from './components/PersonalStatement.jsx'
 import { Experience } from './components/Experience.jsx'
+import Education from './components/Education.jsx'
 import './index.css'
 
 createRoot(document.getElementById('root')).render(
@@ -10,5 +11,6 @@ createRoot(document.getElementById('root')).render(
     <GeneralInfo />
     <PersonalStatement />
     <Experience />
+    <Education />
   </StrictMode>,
 )

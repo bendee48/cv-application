@@ -1,0 +1,115 @@
+import { useState } from 'react';
+
+function Education() {
+  const [educationInfo, setEducationInfo] = useState({institution: "", 
+                                                      level: "", 
+                                                      subject: "",
+                                                      grade: "",
+                                                      startDate: "",
+                                                      endDate: ""})
+  const [saved, setSaved] = useState(false);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (!saved) {
+      setSaved(true);
+    } else {
+      setSaved(false);
+    }
+  }
+
+  function handleInstitutionChange(e) {
+    setEducationInfo({
+      ...educationInfo,
+      institution: e.target.value
+    })
+  }
+
+  function handleLevelChange(e) {
+    setEducationInfo({
+      ...educationInfo,
+      level: e.target.value
+    })
+  }
+
+  function handleSubjectChange(e) {
+    setEducationInfo({
+      ...educationInfo,
+      subject: e.target.value
+    })
+  }
+
+  function handleGradeChange(e) {
+    setEducationInfo({
+      ...educationInfo,
+      grade: e.target.value
+    })
+  }
+
+  function handleStartDateChange(e) {
+    setEducationInfo({
+      ...educationInfo,
+      startDate: e.target.value
+    })
+  }
+
+  function handleEndDateChange(e) {
+    setEducationInfo({
+      ...educationInfo,
+      endDate: e.target.value
+    })
+  }
+
+  return (
+    <>
+      <h1>Education</h1>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="institution">Institution:</label>
+          { !saved ? 
+              (<input id="title" type="text" value={educationInfo.institution} onChange={handleInstitutionChange}/>) : 
+              (<span>{educationInfo.institution}</span>)
+          }
+        </div>
+        <div>
+          <label htmlFor="level">Level:</label>
+          { !saved ? 
+              (<input id="level" type="text" value={educationInfo.level} onChange={handleLevelChange}/>) : 
+              (<span>{educationInfo.level}</span>)
+          }
+        </div>
+        <div>
+          <label htmlFor="subject">Subject:</label>
+          { !saved ? 
+              (<input id="subject" type="text" value={educationInfo.subject} onChange={handleSubjectChange}/>) : 
+              (<span>{educationInfo.subject}</span>)
+          }
+        </div>
+        <div>
+          <label htmlFor="grade">Grade:</label>
+          { !saved ? 
+              (<input id="grade" type="text" value={educationInfo.grade} onChange={handleGradeChange}/>) : 
+              (<span>{educationInfo.grade}</span>)
+          }
+        </div>
+        <div>
+          <label htmlFor="startDate">Start Date:</label>
+          { !saved ? 
+              (<input id="startDate" type="date" value={educationInfo.startDate} onChange={handleStartDateChange}/>) : 
+              (<span>{educationInfo.startDate}</span>)
+          }
+        </div>
+        <div>
+          <label htmlFor="endDate">End Date:</label>
+          { !saved ? 
+              (<input id="endDate" type="date" value={educationInfo.endDate} onChange={handleEndDateChange}/>) : 
+              (<span>{educationInfo.endDate}</span>)
+          }
+        </div>
+        <button>{!saved ? 'Save' : 'Edit'}</button>
+      </form>
+    </>
+  )
+}
+
+export default Education;

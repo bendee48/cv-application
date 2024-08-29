@@ -59,28 +59,57 @@ function Experience() {
         <div>
           <label htmlFor="title">Title:</label>
           { !saved ? 
-              (<input id="title" type="text" value={experienceInfo.title} onChange={handleTitleChange}/>) : 
+              (<input 
+                  id="title" 
+                  type="text"
+                  placeholder='eg Warrant Officer'
+                  value={experienceInfo.title} 
+                  onChange={handleTitleChange}
+                  required
+                />
+              ) : 
               (<span>{experienceInfo.title}</span>)
           }
         </div>
         <div>
           <label htmlFor="company">Company:</label>
           { !saved ? 
-              (<input id="company" type="text" value={experienceInfo.company} onChange={handleCompanyChange}/>) : 
+              (<input 
+                  id="company" 
+                  type="text" 
+                  placeholder='eg Weyland-Yutani Corporation'
+                  value={experienceInfo.company} 
+                  onChange={handleCompanyChange}
+                  required
+                />
+              ) : 
               (<span>{experienceInfo.company}</span>)
           }
         </div>
         <div>
           <label htmlFor="startDate">Start Date:</label>
           { !saved ? 
-              (<input id="startDate" type="date" value={experienceInfo.startDate} onChange={handleStartDateChange}/>) : 
+              (<input 
+                  id="startDate" 
+                  type="date" 
+                  value={experienceInfo.startDate} 
+                  onChange={handleStartDateChange}
+                  required
+                />
+              ) : 
               (<span>{experienceInfo.startDate}</span>)
           }
         </div>
         <div>
           <label htmlFor="endDate">End Date:</label>
           { !saved ? 
-              (<input id="endDate" type="date" value={experienceInfo.endDate} onChange={handleEndDateChange}/>) : 
+              (<input 
+                  id="endDate" 
+                  type="date" 
+                  value={experienceInfo.endDate} 
+                  onChange={handleEndDateChange}
+                />
+              ) : 
               (<span>{experienceInfo.endDate}</span>)
           }
         </div>
@@ -91,7 +120,10 @@ function Experience() {
               <textarea 
                 onChange={handleDescriptionChange} 
                 value={experienceInfo.description} 
-                placeholder="Write at least 3 bullet points describing your role. Focus on your achievements.">
+                placeholder="Write at least 3 bullet points describing your role. Focus on your achievements."
+                cols={40}
+                rows={5}
+              >
               </textarea>
              </p>) : 
             (<p>{experienceInfo.description}</p>)      

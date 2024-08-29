@@ -39,23 +39,47 @@ function GeneralInfo() {
       <h1>Details</h1>
       <form onSubmit={handleFormSubmit}>
         <div>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Full Name:</label>
           { !saved ? 
-              (<input id="name" type="text" value={personalInfo.name} onChange={handleNameChange}/>) : 
+              (<input 
+                  id="name" 
+                  type="text" 
+                  placeholder="eg Ellen Ripley"  
+                  minLength={3} value={personalInfo.name} 
+                  onChange={handleNameChange}
+                  required
+                />
+              ) : 
               (<span>{personalInfo.name}</span>)
           }
         </div>
         <div>
           <label htmlFor="email">Email:</label>
           { !saved ? 
-              (<input id="email" type="email" value={personalInfo.email} onChange={handleEmailChange}/>) : 
+              (<input 
+                  id="email" 
+                  type="email"
+                  placeholder='eg ellen@weyland-yutani.com'
+                  value={personalInfo.email} 
+                  onChange={handleEmailChange}
+                  required
+                />
+              ) : 
               (<span>{personalInfo.email}</span>)
           }
         </div>
         <div>
           <label htmlFor="phone">Phone:</label>
           { !saved ? 
-              (<input id="phone" type="tel" value={personalInfo.phone} onChange={handlePhoneChange}/>) : 
+              (<input 
+                  id="phone" 
+                  type="tel"
+                  placeholder='eg +445555 555 555'
+                  value={personalInfo.phone} 
+                  onChange={handlePhoneChange}
+                  required
+                />
+              ) : 
               (<span>{personalInfo.phone}</span>)
           }
         </div>

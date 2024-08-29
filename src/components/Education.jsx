@@ -61,87 +61,84 @@ function Education() {
   }
 
   return (
-    <>
-      <h1>Education</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="institution">Institution:</label>
-          { !saved ? 
-              (<input 
-                  id="title" 
-                  type="text"
-                  placeholder='eg Olympia University'
-                  value={educationInfo.institution} 
-                  onChange={handleInstitutionChange}
-                  required
-                />
-              ) : 
-              (<span>{educationInfo.institution}</span>)
-          }
-        </div>
-        <div>
-          <label htmlFor="level">Level:</label>
-          { !saved ? 
-              (<input 
-                  id="level" 
-                  type="text" 
-                  placeholder='eg Undergraduate Degree'
-                  value={educationInfo.level} 
-                  onChange={handleLevelChange}
-                  required
-                />
-              ) : 
-              (<span>{educationInfo.level}</span>)
-          }
-        </div>
-        <div>
-          <label htmlFor="subject">Subject:</label>
-          { !saved ? 
-              (<input 
-                  id="subject" 
-                  type="text"
-                  placeholder='eg Xenomorph Studies'
-                  value={educationInfo.subject} 
-                  onChange={handleSubjectChange}
-                  required
-                />
-              ) : 
-              (<span>{educationInfo.subject}</span>)
-          }
-        </div>
-        <div>
-          <label htmlFor="grade">Grade:</label>
-          { !saved ? 
-              (<input 
-                  id="grade" 
-                  type="text"
-                  placeholder='eg 2.1'
-                  value={educationInfo.grade} 
-                  onChange={handleGradeChange}
-                  required
-                />
-              ) : 
-              (<span>{educationInfo.grade}</span>)
-          }
-        </div>
-        <div>
-          <label htmlFor="startDate">Start Date:</label>
-          { !saved ? 
-              (<input 
-                  id="startDate" type="date" value={educationInfo.startDate} onChange={handleStartDateChange}/>) : 
-              (<span>{educationInfo.startDate}</span>)
-          }
-        </div>
-        <div>
-          <label htmlFor="endDate">End Date:</label>
-          { !saved ? 
-              (<input id="endDate" type="date" value={educationInfo.endDate} onChange={handleEndDateChange}/>) : 
-              (<span>{educationInfo.endDate}</span>)
-          }
-        </div>
-        <button>{!saved ? 'Save' : 'Edit'}</button>
-      </form>
-    </>
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="institution">Institution:</label>
+        { !saved ? 
+            (<input 
+                id="title" 
+                type="text"
+                placeholder='eg Olympia University'
+                value={educationInfo.institution} 
+                onChange={handleInstitutionChange}
+                required
+              />
+            ) : 
+            (<span>{educationInfo.institution}</span>)
+        }
+      </div>
+      <div>
+        <label htmlFor="level">Level:</label>
+        { !saved ? 
+            (<input 
+                id="level" 
+                type="text" 
+                placeholder='eg Undergraduate Degree'
+                value={educationInfo.level} 
+                onChange={handleLevelChange}
+                required
+              />
+            ) : 
+            (<span>{educationInfo.level}</span>)
+        }
+      </div>
+      <div>
+        <label htmlFor="subject">Subject:</label>
+        { !saved ? 
+            (<input 
+                id="subject" 
+                type="text"
+                placeholder='eg Xenomorph Studies'
+                value={educationInfo.subject} 
+                onChange={handleSubjectChange}
+                required
+              />
+            ) : 
+            (<span>{educationInfo.subject}</span>)
+        }
+      </div>
+      <div>
+        <label htmlFor="grade">Grade:</label>
+        { !saved ? 
+            (<input 
+                id="grade" 
+                type="text"
+                placeholder='eg 2.1'
+                value={educationInfo.grade} 
+                onChange={handleGradeChange}
+                required
+              />
+            ) : 
+            (<span>{educationInfo.grade}</span>)
+        }
+      </div>
+      <div>
+        <label htmlFor="startDate">Start Date:</label>
+        { !saved ? 
+            (<input 
+                id="startDate" type="date" value={educationInfo.startDate} onChange={handleStartDateChange}/>) : 
+            (<span>{educationInfo.startDate}</span>)
+        }
+      </div>
+      <div>
+        <label htmlFor="endDate">End Date:</label>
+        { !saved ? 
+            (<input id="endDate" type="date" value={educationInfo.endDate} onChange={handleEndDateChange}/>) : 
+            (<span>{educationInfo.endDate}</span>)
+        }
+      </div>
+      <button>{!saved ? 'Save' : 'Edit'}</button>
+    </form>
   )
 }
 

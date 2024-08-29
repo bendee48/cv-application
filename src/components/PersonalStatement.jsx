@@ -18,17 +18,14 @@ function PersonalStatement() {
   }
 
   return (
-    <>
-      <h1>Statement</h1>
-      <form onSubmit={handleSubmit}>
-        { !saved ? 
-            (<p><textarea onChange={handleStatementChange} value={statement} placeholder="Say a little about yourself..."></textarea></p>) : 
-            (<p>{statement}</p>)      
-        }
-        <button>{!saved ? 'Save' : 'Edit'}</button>
-      </form>
-    </>
+    <form onSubmit={handleSubmit}>
+      { !saved ? 
+          (<p><textarea onChange={handleStatementChange} value={statement} placeholder="Say a little about yourself..."></textarea></p>) : 
+          (<p>{statement}</p>)      
+      }
+      <button>{!saved ? 'Save' : 'Edit'}</button>
+    </form>
   )
 }
 
-export { PersonalStatement };
+export default PersonalStatement;

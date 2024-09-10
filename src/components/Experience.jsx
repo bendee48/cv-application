@@ -50,6 +50,7 @@ function Experience() {
       ...experienceInfo,
       description: e.target.value
     })
+    console.log(experienceInfo)
   }
 
   return (
@@ -118,7 +119,7 @@ function Experience() {
             <textarea 
               onChange={handleDescriptionChange} 
               value={experienceInfo.description} 
-              placeholder="Write at least 3 bullet points describing your role. Focus on your achievements."
+              placeholder="Write a short paragraph describing your role and achievements."
               cols={40}
               rows={5}
             >

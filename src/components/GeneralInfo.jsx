@@ -36,23 +36,25 @@ function GeneralInfo() {
 
   return (
     <form onSubmit={handleFormSubmit}>
-      <div>
-        <label htmlFor="name">Full Name:</label>
+      <div className='input-field'>
+        <label htmlFor="name">Full Name</label>
         { !saved ? 
             (<input 
                 id="name" 
                 type="text" 
                 placeholder="eg Ellen Ripley"  
-                minLength={3} value={personalInfo.name} 
+                value={personalInfo.name} 
                 onChange={handleNameChange}
+                minLength={3}
+                maxLength={40}
                 required
               />
             ) : 
             (<span>{personalInfo.name}</span>)
         }
       </div>
-      <div>
-        <label htmlFor="email">Email:</label>
+      <div className='input-field'> 
+        <label htmlFor="email">Email</label>
         { !saved ? 
             (<input 
                 id="email" 
@@ -60,14 +62,15 @@ function GeneralInfo() {
                 placeholder='eg ellen@weyland-yutani.com'
                 value={personalInfo.email} 
                 onChange={handleEmailChange}
+                maxLength={40} 
                 required
               />
             ) : 
             (<span>{personalInfo.email}</span>)
         }
       </div>
-      <div>
-        <label htmlFor="phone">Phone:</label>
+      <div className='input-field'>
+        <label htmlFor="phone">Phone</label>
         { !saved ? 
             (<input 
                 id="phone" 

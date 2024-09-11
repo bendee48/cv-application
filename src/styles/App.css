@@ -1,20 +1,3 @@
-/* Defaults */
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1.2rem;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
 /* Main Styling */
 
 #root {
@@ -24,21 +7,34 @@ h1 {
   text-align: center;
 }
 
+.section-header {
+  margin-bottom: 1em;
+}
+
+/* Forms */
+
 form {
   /* border: 1px solid blue; */
 }
 
 label {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   text-align: left;
-  /* margin-right: 1em; */
+  margin-right: 0.5em;
 }
 
-input {
+input,
+.text-area {
   border: none;
-  padding: 1em;
+  font-family: inherit;
+  font-size: 1.5rem;
+  padding: 0.5em;
   border-radius: 0.2em;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+input[type="date"] {
+  opacity: 0.55;
 }
 
 input:focus {
@@ -50,5 +46,10 @@ input:focus {
   display: grid;
   grid-template-columns: 1fr 3fr;
   align-items: center;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+}
+
+.text-area {
+  border: 1px solid gray;
+  width: 100%;
 }

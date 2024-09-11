@@ -50,12 +50,11 @@ function Experience() {
       ...experienceInfo,
       description: e.target.value
     })
-    console.log(experienceInfo)
   }
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+      <div className='input-field'>
         <label htmlFor="title">Title:</label>
         { !saved ? 
             (<input 
@@ -70,7 +69,7 @@ function Experience() {
             (<span>{experienceInfo.title}</span>)
         }
       </div>
-      <div>
+      <div className='input-field'>
         <label htmlFor="company">Company:</label>
         { !saved ? 
             (<input 
@@ -85,7 +84,7 @@ function Experience() {
             (<span>{experienceInfo.company}</span>)
         }
       </div>
-      <div>
+      <div className='input-field'>
         <label htmlFor="startDate">Start Date:</label>
         { !saved ? 
             (<input 
@@ -99,7 +98,7 @@ function Experience() {
             (<span>{experienceInfo.startDate}</span>)
         }
       </div>
-      <div>
+      <div className='input-field'>
         <label htmlFor="endDate">End Date:</label>
         { !saved ? 
             (<input 
@@ -115,16 +114,17 @@ function Experience() {
       <div>
         <label htmlFor="description">Description:</label>
         { !saved ? 
-          (<p>
+          (
             <textarea 
+              className='text-area'
               onChange={handleDescriptionChange} 
               value={experienceInfo.description} 
               placeholder="Write a short paragraph describing your role and achievements."
               cols={40}
-              rows={5}
+              rows={10}
             >
             </textarea>
-            </p>) : 
+          ) : 
           (<p>{experienceInfo.description}</p>)      
         }
       </div>

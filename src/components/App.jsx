@@ -1,10 +1,10 @@
 import { useState, useRef } from 'react'
-import GeneralInfo from './components/GeneralInfo.jsx'
-import PersonalStatement from './components/PersonalStatement.jsx'
-import { Experience } from './components/Experience.jsx'
-import Education from './components/Education.jsx'
-import AddButton from './components/AddButton.jsx'
-import './App.css'
+import GeneralInfo from './GeneralInfo.jsx'
+import PersonalStatement from './PersonalStatement.jsx'
+import { Experience } from './Experience.jsx'
+import Education from './Education.jsx'
+import AddButton from './AddButton.jsx'
+import '../styles/App.css'
 
 function App() {
   let expIndex = useRef(0)
@@ -30,14 +30,14 @@ function App() {
 
   return (
     <>
-      <h1>Details</h1>
+      <h1 className='section-header'>Details</h1>
         <GeneralInfo />
-      <h1>Statement</h1>
+      <h1 className='section-header'>Statement</h1>
         <PersonalStatement />
-      <h1>Experience</h1>
+      <h1 className='section-header'>Experience</h1>
         {experiences}
         <AddButton text="experience" handleClick={addExperience} />
-      <h1>Education</h1>
+      <h1 className='section-header'>Education</h1>
         {education}
         <AddButton text="education" handleClick={addEducation} />
     </>

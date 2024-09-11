@@ -62,7 +62,7 @@ function Education() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+      <div className='input-field'>
         <label htmlFor="institution">Institution:</label>
         { !saved ? 
             (<input 
@@ -77,7 +77,7 @@ function Education() {
             (<span>{educationInfo.institution}</span>)
         }
       </div>
-      <div>
+      <div className='input-field'>
         <label htmlFor="level">Level:</label>
         { !saved ? 
             (<input 
@@ -92,7 +92,7 @@ function Education() {
             (<span>{educationInfo.level}</span>)
         }
       </div>
-      <div>
+      <div className='input-field'>
         <label htmlFor="subject">Subject:</label>
         { !saved ? 
             (<input 
@@ -107,7 +107,7 @@ function Education() {
             (<span>{educationInfo.subject}</span>)
         }
       </div>
-      <div>
+      <div className='input-field'>
         <label htmlFor="grade">Grade:</label>
         { !saved ? 
             (<input 
@@ -122,7 +122,7 @@ function Education() {
             (<span>{educationInfo.grade}</span>)
         }
       </div>
-      <div>
+      <div className='input-field'>
         <label htmlFor="startDate">Start Date:</label>
         { !saved ? 
             (<input 
@@ -130,7 +130,7 @@ function Education() {
             (<span>{educationInfo.startDate}</span>)
         }
       </div>
-      <div>
+      <div className='input-field'>
         <label htmlFor="endDate">End Date:</label>
         { !saved ? 
             (<input id="endDate" type="date" value={educationInfo.endDate} onChange={handleEndDateChange}/>) : 

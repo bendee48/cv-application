@@ -37,7 +37,7 @@ function GeneralInfo() {
   return (
     <form onSubmit={handleFormSubmit}>
       <div className='input-field'>
-        <label htmlFor="name">Full Name</label>
+        <label htmlFor="name">Full Name:</label>
         { !saved ? 
             (<input 
                 id="name" 
@@ -54,7 +54,7 @@ function GeneralInfo() {
         }
       </div>
       <div className='input-field'> 
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">Email:</label>
         { !saved ? 
             (<input 
                 id="email" 
@@ -70,7 +70,7 @@ function GeneralInfo() {
         }
       </div>
       <div className='input-field'>
-        <label htmlFor="phone">Phone</label>
+        <label htmlFor="phone">Phone:</label>
         { !saved ? 
             (<input 
                 id="phone" 

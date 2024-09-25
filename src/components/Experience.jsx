@@ -112,7 +112,7 @@ function Experience() {
         }
       </div>
       <div>
-        <label htmlFor="description">Description:</label>
+        {/* <label htmlFor="description">Description:</label> */}
         { !saved ? 
           (
             <textarea 
@@ -128,7 +128,7 @@ function Experience() {
           (<p>{experienceInfo.description}</p>)      
         }
       </div>
-      <button>{!saved ? 'Save' : 'Edit'}</button>
+      <button className='btn'>{!saved ? 'Save' : 'Edit'}</button>
     </form>
   )
 }

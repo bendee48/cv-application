@@ -4,6 +4,7 @@ import PersonalStatement from './PersonalStatement.jsx'
 import { Experience } from './Experience.jsx'
 import Education from './Education.jsx'
 import AddButton from './AddButton.jsx'
+import Section from './Section.jsx'
 import '../styles/App.css'
 
 function App() {
@@ -30,16 +31,24 @@ function App() {
 
   return (
     <>
-      <h1 className='section-header'>Details</h1>
+      <Section>
+        <h1 className='section-header'>Details</h1>
         <GeneralInfo />
-      <h1 className='section-header'>Statement</h1>
+      </Section>
+      <Section>
+        <h1 className='section-header'>Statement</h1>
         <PersonalStatement />
-      <h1 className='section-header'>Experience</h1>
+      </Section>
+      <Section>
+        <h1 className='section-header'>Experience</h1>
         {experiences}
         <AddButton text="experience" handleClick={addExperience} />
-      <h1 className='section-header'>Education</h1>
+      </Section>
+      <Section>
+        <h1 className='section-header'>Education</h1>
         {education}
         <AddButton text="education" handleClick={addEducation} />
+      </Section>
     </>
   )
 }

@@ -23,7 +23,7 @@ function PersonalStatement() {
           (<textarea className="text-area" rows={10} onChange={handleStatementChange} value={statement} placeholder="Say a little about yourself..."></textarea>) : 
           (<p>{statement}</p>)      
       }
-      <button>{!saved ? 'Save' : 'Edit'}</button>
+      <button className='btn'>{!saved ? 'Save' : 'Edit'}</button>
     </form>
   )
 }

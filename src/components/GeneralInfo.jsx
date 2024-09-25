@@ -84,7 +84,7 @@ function GeneralInfo() {
             (<span>{personalInfo.phone}</span>)
         }
       </div>
-      <button>{!saved ? 'Save' : 'Edit'}</button>
+      <button className='btn'>{!saved ? 'Save' : 'Edit'}</button>
     </form>
   )
 }

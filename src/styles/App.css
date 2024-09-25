@@ -7,14 +7,20 @@
   text-align: center;
 }
 
+/* Section */
+
+.section {
+  margin-bottom: 4em;
+}
+
 .section-header {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 /* Forms */
 
 form {
-  /* border: 1px solid blue; */
+  margin-top: 2em;
 }
 
 label {
@@ -30,7 +36,7 @@ input,
   font-size: 1.5rem;
   padding: 0.5em;
   border-radius: 0.2em;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(52, 28, 80, 0.19), 0 6px 6px rgba(58, 22, 76, 0.23);
 }
 
 input[type="date"] {
@@ -52,4 +58,12 @@ input:focus {
 .text-area {
   border: 1px solid gray;
   width: 100%;
+}
+
+.text-area:focus {
+  outline-color: blueviolet; 
+}
+
+.btn {
+  margin-top: 1em;
 }

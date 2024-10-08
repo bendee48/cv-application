@@ -122,6 +122,7 @@ function Experience() {
               placeholder="Write a short paragraph describing your role and achievements."
               cols={40}
               rows={10}
+              required
             >
             </textarea>
           ) : 

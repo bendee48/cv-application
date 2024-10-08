@@ -126,7 +126,12 @@ function Education() {
         <label className="date-label" htmlFor="startDate">Start Date:</label>
         { !saved ? 
             (<input 
-                id="startDate" type="date" value={educationInfo.startDate} onChange={handleStartDateChange}/>) : 
+                id="startDate" 
+                type="date" 
+                value={educationInfo.startDate} 
+                onChange={handleStartDateChange}
+                required
+             />) : 
             (<span className='display-info'>{educationInfo.startDate}</span>)
         }
       </div>

@@ -74,7 +74,7 @@ function Education() {
                 required
               />
             ) : 
-            (<span>{educationInfo.institution}</span>)
+            (<span className='display-info'>{educationInfo.institution}</span>)
         }
       </div>
       <div className='input-field'>
@@ -89,7 +89,7 @@ function Education() {
                 required
               />
             ) : 
-            (<span>{educationInfo.level}</span>)
+            (<span className='display-info'>{educationInfo.level}</span>)
         }
       </div>
       <div className='input-field'>
@@ -104,7 +104,7 @@ function Education() {
                 required
               />
             ) : 
-            (<span>{educationInfo.subject}</span>)
+            (<span className='display-info'>{educationInfo.subject}</span>)
         }
       </div>
       <div className='input-field'>
@@ -119,25 +119,25 @@ function Education() {
                 required
               />
             ) : 
-            (<span>{educationInfo.grade}</span>)
+            (<span className='display-info'>{educationInfo.grade}</span>)
         }
       </div>
       <div className='input-field'>
-        <label htmlFor="startDate">Start Date:</label>
+        <label className="date-label" htmlFor="startDate">Start Date:</label>
         { !saved ? 
             (<input 
                 id="startDate" type="date" value={educationInfo.startDate} onChange={handleStartDateChange}/>) : 
-            (<span>{educationInfo.startDate}</span>)
+            (<span className='display-info'>{educationInfo.startDate}</span>)
         }
       </div>
       <div className='input-field'>
-        <label htmlFor="endDate">End Date:</label>
+        <label className="date-label" htmlFor="endDate">End Date:</label>
         { !saved ? 
             (<input id="endDate" type="date" value={educationInfo.endDate} onChange={handleEndDateChange}/>) : 
-            (<span>{educationInfo.endDate}</span>)
+            (<span className='display-info'>{educationInfo.endDate}</span>)
         }
       </div>
-      <button>{!saved ? 'Save' : 'Edit'}</button>
+      <button className="btn btn-dark">{!saved ? 'Save' : 'Edit'}</button>
     </form>
   )
 }

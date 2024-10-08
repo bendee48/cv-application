@@ -21,9 +21,9 @@ function PersonalStatement() {
     <form onSubmit={handleSubmit}>
       { !saved ? 
           (<textarea className="text-area" rows={10} onChange={handleStatementChange} value={statement} placeholder="Say a little about yourself..."></textarea>) : 
-          (<p>{statement}</p>)      
+          (<p className='display-info statement'>{statement}</p>)      
       }
-      <button className='btn'>{!saved ? 'Save' : 'Edit'}</button>
+      <button className='btn btn-dark'>{!saved ? 'Save' : 'Edit'}</button>
     </form>
   )
 }

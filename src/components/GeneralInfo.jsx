@@ -50,7 +50,7 @@ function GeneralInfo() {
                 required
               />
             ) : 
-            (<span>{personalInfo.name}</span>)
+            (<span className='display-info'>{personalInfo.name}</span>)
         }
       </div>
       <div className='input-field'> 
@@ -66,7 +66,7 @@ function GeneralInfo() {
                 required
               />
             ) : 
-            (<span>{personalInfo.email}</span>)
+            (<span className='display-info'>{personalInfo.email}</span>)
         }
       </div>
       <div className='input-field'>
@@ -81,10 +81,10 @@ function GeneralInfo() {
                 required
               />
             ) : 
-            (<span>{personalInfo.phone}</span>)
+            (<span className='display-info'>{personalInfo.phone}</span>)
         }
       </div>
-      <button className='btn'>{!saved ? 'Save' : 'Edit'}</button>
+      <button className='btn btn-dark'>{!saved ? 'Save' : 'Edit'}</button>
     </form>
   )
 }

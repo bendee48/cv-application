@@ -1,8 +1,8 @@
 function Section({children}) {
   return (
-    <div class="section">
+    <section>
       {children}
-    </div>
+    </section>
   )
 }
 

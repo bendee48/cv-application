@@ -7,9 +7,21 @@
   text-align: center;
 }
 
+.btn {
+  margin-top: 1em;
+}
+
+.btn-dark {
+  background-color: #d3bfe0;
+}
+
+.btn-add {
+  opacity: 0.6;
+}
+
 /* Section */
 
-.section {
+section {
   margin-bottom: 4em;
 }
 
@@ -23,10 +35,8 @@ form {
   margin-top: 2em;
 }
 
-label {
-  font-size: 1.2rem;
-  text-align: left;
-  margin-right: 0.5em;
+.date-label {
+  font-size: 0.9rem;
 }
 
 input,
@@ -64,6 +74,13 @@ input:focus {
   outline-color: blueviolet; 
 }
 
-.btn {
-  margin-top: 1em;
+/* Display Info */
+
+.display-info {
+  font-size: 1.5rem;
 }
+
+.statement {
+  margin-bottom: 1.5em;
+}
+

@@ -66,7 +66,7 @@ function Experience() {
                 required
               />
             ) : 
-            (<span>{experienceInfo.title}</span>)
+            (<span className='display-info'>{experienceInfo.title}</span>)
         }
       </div>
       <div className='input-field'>
@@ -81,11 +81,11 @@ function Experience() {
                 required
               />
             ) : 
-            (<span>{experienceInfo.company}</span>)
+            (<span className='display-info'>{experienceInfo.company}</span>)
         }
       </div>
       <div className='input-field'>
-        <label htmlFor="startDate">Start Date:</label>
+        <label className="date-label" htmlFor="startDate">Start Date:</label>
         { !saved ? 
             (<input 
                 id="startDate" 
@@ -95,11 +95,11 @@ function Experience() {
                 required
               />
             ) : 
-            (<span>{experienceInfo.startDate}</span>)
+            (<span className='display-info'>{experienceInfo.startDate}</span>)
         }
       </div>
       <div className='input-field'>
-        <label htmlFor="endDate">End Date:</label>
+        <label className="date-label" htmlFor="endDate">End Date:</label>
         { !saved ? 
             (<input 
                 id="endDate" 
@@ -108,10 +108,10 @@ function Experience() {
                 onChange={handleEndDateChange}
               />
             ) : 
-            (<span>{experienceInfo.endDate}</span>)
+            (<span className='display-info'>{experienceInfo.endDate}</span>)
         }
       </div>
-      <div>
+      <div className='statement'>
         {/* <label htmlFor="description">Description:</label> */}
         { !saved ? 
           (
@@ -125,10 +125,10 @@ function Experience() {
             >
             </textarea>
           ) : 
-          (<p>{experienceInfo.description}</p>)      
+          (<p className='display-info'>{experienceInfo.description}</p>)      
         }
       </div>
-      <button className='btn'>{!saved ? 'Save' : 'Edit'}</button>
+      <button className='btn btn-dark'>{!saved ? 'Save' : 'Edit'}</button>
     </form>
   )
 }

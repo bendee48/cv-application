@@ -11,6 +11,10 @@
   margin-top: 1em;
 }
 
+.btn:hover {
+  filter: brightness(0.9) contrast(150%);
+}
+
 .btn-dark {
   background-color: #d3bfe0;
 }

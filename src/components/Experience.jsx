@@ -4,7 +4,8 @@ function Experience() {
   const [experienceInfo, setExperienceInfo] = useState({title: "", 
                                                         company: "", 
                                                         startDate: "", 
-                                                        endDate: "", 
+                                                        endDate: "",
+                                                        inRole: false,
                                                         description: ""});
   const [saved, setSaved] = useState(false);
 
@@ -49,6 +50,13 @@ function Experience() {
     setExperienceInfo({
       ...experienceInfo,
       description: e.target.value
+    })
+  }
+
+  function handleInRoleChange(e) {
+    setExperienceInfo({
+      ...experienceInfo,
+      inRole: e.target.checked
     })
   }
 
@@ -98,18 +106,31 @@ function Experience() {
             (<span className='display-info'>{experienceInfo.startDate}</span>)
         }
       </div>
+      { !experienceInfo.inRole ? 
+        (
+          <div className='input-field'>
+            <label className="date-label" htmlFor="endDate">End Date:</label>
+            { !saved ? 
+                (<input 
+                    id="endDate" 
+                    type="date" 
+                    value={experienceInfo.endDate} 
+                    onChange={handleEndDateChange}
+                  />
+                ) : 
+                (<span className='display-info'>{experienceInfo.endDate}</span>)
+            }
+          </div>
+        ) : ( null )
+      }
       <div className='input-field'>
-        <label className="date-label" htmlFor="endDate">End Date:</label>
-        { !saved ? 
-            (<input 
-                id="endDate" 
-                type="date" 
-                value={experienceInfo.endDate} 
-                onChange={handleEndDateChange}
-              />
-            ) : 
-            (<span className='display-info'>{experienceInfo.endDate}</span>)
-        }
+        <label htmlFor="currentRole">Current role?</label>
+        <input 
+          id="currentRole" 
+          type="checkbox" 
+          checked={experienceInfo.inRole}
+          onChange={handleInRoleChange}
+        />
       </div>
       <div className='statement'>
         {/* <label htmlFor="description">Description:</label> */}

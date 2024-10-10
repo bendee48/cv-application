@@ -71,6 +71,13 @@ input:focus {
   margin-bottom: 1.5em;
 }
 
+input[type="checkbox"] {
+  cursor: pointer;
+  width: 1.5em;
+  height: 1.5em;
+  accent-color: blueviolet;
+}
+
 .text-area {
   border: 1px solid gray;
   width: 100%;
@@ -95,6 +102,11 @@ input:focus {
 @media(min-width: 700px) {
   section {
     padding: 3em;
+  }
+
+  input[type="checkbox"] {
+    width: 1em;
+    height: 1em;
   }
 }
 

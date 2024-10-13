@@ -116,6 +116,7 @@ function Experience() {
                     type="date" 
                     value={experienceInfo.endDate} 
                     onChange={handleEndDateChange}
+                    required
                   />
                 ) : 
                 (<span className='display-info'>{experienceInfo.endDate}</span>)
@@ -124,13 +125,19 @@ function Experience() {
         ) : ( null )
       }
       <div className='input-field'>
-        <label htmlFor="currentRole">Current role?</label>
-        <input 
-          id="currentRole" 
-          type="checkbox" 
-          checked={experienceInfo.inRole}
-          onChange={handleInRoleChange}
-        />
+        { !saved ? (
+            <>
+              <label htmlFor="currentRole">Current role?</label>
+              <input 
+                id="currentRole" 
+                type="checkbox" 
+                checked={experienceInfo.inRole}
+                onChange={handleInRoleChange}
+              />
+            </>
+        ) : saved && experienceInfo.inRole ? (
+              <span className="in-role">Currently In Role</span>
+        ) : (null) }
       </div>
       <div className='statement'>
         {/* <label htmlFor="description">Description:</label> */}

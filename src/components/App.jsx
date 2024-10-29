@@ -10,15 +10,26 @@ import '../styles/App.css'
 function App() {
   let expIndex = useRef(0)
   let eduIndex = useRef(0)
-  const [experiences, setExperiences] = useState([<Experience key={expIndex.current}/>]);
+  const [experiences, setExperiences] = useState([
+    {id: expIndex.current, experience: <Experience key={expIndex.current} id={expIndex.current} deleteBtn={false} /> }
+  ]);
   const [education, setEducation] = useState([<Education key={eduIndex.current}/>]);
 
   function addExperience() {
     expIndex.current++;
     setExperiences([
       ...experiences,
-      <Experience key={expIndex.current}/>
+      {
+        id: expIndex.current, 
+        experience: <Experience key={expIndex.current} id={expIndex.current} deleteBtn={true} deleteHandler={deleteExperience}/>
+      }
     ])
+  }
+
+  function deleteExperience(id) {
+    setExperiences(exps => {
+      return exps.filter(exp => exp.id !== id)
+    })
   }
 
   function addEducation() {
@@ -41,7 +52,7 @@ function App() {
       </Section>
       <Section>
         <h1 className='section-header'>Experience</h1>
-        {experiences}
+        {experiences.map(comp => comp.experience )}
         <AddButton text="experience" handleClick={addExperience} />
       </Section>
       <Section>

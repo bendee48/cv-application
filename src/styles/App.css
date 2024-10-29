@@ -23,6 +23,10 @@
   opacity: 0.6;
 }
 
+.btn-delete {
+  background-color: #f7a3a3;
+}
+
 /* Section */
 
 section {
@@ -57,7 +61,7 @@ input,
 
 input[type="date"] {
   cursor: auto;
-  opacity: 0.55;
+  opacity: 0.5;
 }
 
 input:focus {
@@ -86,6 +90,11 @@ input[type="checkbox"] {
 
 .text-area:focus {
   outline-color: blueviolet; 
+}
+
+.form-btns {
+  display: flex;
+  gap: 1em;
 }
 
 /* Display Info */

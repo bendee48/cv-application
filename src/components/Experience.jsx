@@ -1,14 +1,29 @@
 import { useState } from 'react';
 
-function Experience() {
-  const [experienceInfo, setExperienceInfo] = useState({title: "", 
-                                                        company: "", 
-                                                        startDate: "", 
-                                                        endDate: "",
-                                                        inRole: false,
-                                                        description: ""});
+/**
+ * Experience component renders a form that captures and displays details of a user's professional experience.
+ * The form toggles between edit and display modes based on whether the information has been saved.
+ *
+ * @param {boolean} deleteBtn - Determines whether a "Delete" button is to be displayed.
+ */
+function Experience({id, deleteBtn, deleteHandler}) {
+  // State to hold experience info, initialized with empty/default values.
+  const [experienceInfo, setExperienceInfo] = useState({
+    title: "",      // job title
+    company: "",    // company name
+    startDate: "",  // the role's start date
+    endDate: "",    // the roles end date
+    inRole: false,  // boolean to indicate if still in role
+    description: "" // a short description of the role and achievements
+  }); 
+
+  // State to track if the form is in 'saved' mode or 'edit' mode.
   const [saved, setSaved] = useState(false);
 
+  /**
+   * Handles form submission. Toggles between saving and editing modes.
+   * @param {Event} e - The form submit event
+   */
   function handleSubmit(e) {
     e.preventDefault();
     if (!saved) {
@@ -18,6 +33,7 @@ function Experience() {
     }
   }
 
+  // Handlers to update specific fields in experienceInfo based on user input.
   function handleTitleChange(e) {
     setExperienceInfo({
       ...experienceInfo,
@@ -58,6 +74,10 @@ function Experience() {
       ...experienceInfo,
       inRole: e.target.checked
     })
+  }
+
+  function handleDelete(id) {
+    deleteHandler(id);
   }
 
   return (
@@ -157,7 +177,20 @@ function Experience() {
           (<p className='display-info'>{experienceInfo.description}</p>)      
         }
       </div>
-      <button className='btn btn-dark'>{!saved ? 'Save' : 'Edit'}</button>
+      <div className='form-btns'>
+        {/* Button to toggle between Save/Edit modes */}
+        <button className='btn btn-dark'>{!saved ? 'Save' : 'Edit'}</button>
+        {/* Conditionally render the Delete button if deleteBtn prop is true */}
+        {deleteBtn && <button 
+                        className='btn btn-delete' 
+                        type='button' 
+                        onClick={() => {
+                          handleDelete(id);
+                        }}
+                      >
+                        Delete
+                      </button>}
+      </div>
     </form>
   )
 }

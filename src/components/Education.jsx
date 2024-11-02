@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Education() {
+function Education({id, deleteBtn, deleteHandler}) {
   const [educationInfo, setEducationInfo] = useState({institution: "", 
                                                       level: "", 
                                                       subject: "",
@@ -58,6 +58,10 @@ function Education() {
       ...educationInfo,
       endDate: e.target.value
     })
+  }
+
+  function handleDelete(id) {
+    deleteHandler(id);
   }
 
   return (
@@ -142,7 +146,21 @@ function Education() {
             (<span className='display-info'>{educationInfo.endDate}</span>)
         }
       </div>
-      <button className="btn btn-dark">{!saved ? 'Save' : 'Edit'}</button>
+      {/* <button className="btn btn-dark">{!saved ? 'Save' : 'Edit'}</button> */}
+      <div className='form-btns'>
+        {/* Button to toggle between Save/Edit modes */}
+        <button className='btn btn-dark'>{!saved ? 'Save' : 'Edit'}</button>
+        {/* Conditionally render the Delete button if deleteBtn prop is true */}
+        {deleteBtn && <button 
+                        className='btn btn-delete' 
+                        type='button' 
+                        onClick={() => {
+                          handleDelete(id);
+                        }}
+                      >
+                        Delete
+                      </button>}
+      </div>
     </form>
   )
 }

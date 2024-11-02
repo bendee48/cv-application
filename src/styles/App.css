@@ -21,6 +21,7 @@
 
 .btn-add {
   opacity: 0.6;
+  margin-top: 2em;
 }
 
 .btn-delete {
@@ -95,6 +96,8 @@ input[type="checkbox"] {
 .form-btns {
   display: flex;
   gap: 1em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.475);
 }
 
 /* Display Info */
@@ -104,7 +107,7 @@ input[type="checkbox"] {
 }
 
 .statement {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 .in-role {
@@ -118,6 +121,10 @@ input[type="checkbox"] {
 /* Tablet & Desktop */
 
 @media(min-width: 700px) {
+  #root {
+    min-width: 600px;
+  }
+
   section {
     padding: 3em;
   }

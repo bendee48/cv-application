@@ -76,6 +76,7 @@ function Experience({id, deleteBtn, deleteHandler}) {
     })
   }
 
+  // Handler to delete an Experience in App.jsx
   function handleDelete(id) {
     deleteHandler(id);
   }

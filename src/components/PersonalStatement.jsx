@@ -21,7 +21,7 @@ function PersonalStatement() {
     <form onSubmit={handleSubmit}>
       { !saved ? 
           (<textarea 
-              className="text-area" 
+              className="text-area statement" 
               rows={10} 
               onChange={handleStatementChange} 
               value={statement} 

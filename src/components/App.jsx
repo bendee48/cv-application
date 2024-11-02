@@ -27,6 +27,7 @@ function App() {
   }
 
   function deleteExperience(id) {
+    // use updater function to get the latest state of the experiences for deletion
     setExperiences(exps => {
       return exps.filter(exp => exp.id !== id)
     })

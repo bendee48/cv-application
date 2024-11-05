@@ -7,6 +7,18 @@
   text-align: center;
 }
 
+#root > section:first-of-type {
+  margin-top: 3em;
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  margin-left: 0.5em;
+  font-size: 2rem;
+  font-style: italic;
+}
+
 .btn {
   margin-top: 1em;
 }

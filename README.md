@@ -1,8 +1,21 @@
-# React + Vite
+# CV App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## React, JavaScript, HTML and CSS
 
-Currently, two official plugins are available:
+Learning React - first project (via the [Odin Project](https://www.theodinproject.com/lessons/react-new-cv-application)).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Features
+  - Enter then display CV details.
+  - Edit sections
+  - Add futher education and employment sections
+
+### Objectives of Project
+  - Creating a project using the fundamentals of React learnt so far.
+
+### Built with
+  - React
+  - HTML
+  - CSS
+  - JavaScript
+
+  [Live Version](https://bendee48.github.io/weather-app/)

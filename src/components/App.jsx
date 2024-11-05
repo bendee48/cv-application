@@ -54,6 +54,7 @@ function App() {
 
   return (
     <>
+      <h1 className="title">CV Application</h1>
       <Section>
         <h1 className='section-header'>Details</h1>
         <GeneralInfo />

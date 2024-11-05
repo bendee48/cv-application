@@ -18,4 +18,4 @@ Learning React - first project (via the [Odin Project](https://www.theodinprojec
   - CSS
   - JavaScript
 
-  [Live Version](https://bendee48.github.io/weather-app/)
+  [Live Version]()

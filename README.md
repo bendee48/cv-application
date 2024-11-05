@@ -18,4 +18,4 @@ Learning React - first project (via the [Odin Project](https://www.theodinprojec
   - CSS
   - JavaScript
 
-  [Live Version]()
+  [Live Version](https://cv-application-48.netlify.app/)
